@@ -13,9 +13,11 @@ function isPrime(n) {
 
 
 function printPrime(num) {
-    let pp = '';
+    let primeNumber = '';
     for (let n = 2; n <= num; n++){
-        if(isPrime(n)) {pp += n}
+        if(isPrime(n)) {primeNumber += `${n},`}
     }
-    return pp;
+    return primeNumber.slice(0,(primeNumber.length-1));
 }
+
+console.log(printPrime(num));
